@@ -42,3 +42,20 @@ const addtwoo = (num1, num2) => ({username: "Ayush"});
 console.log(addtwoo(4, 6));
 
 //object ko return krne ke liye {} lagana hi padega 
+
+// --------------------------------------
+// global scope ke pollution ko hatane ke liye IIFE ka use krte hai and ye immediatly excute ho jata hai 
+// syntax - (everything of function)()
+
+(function ayu(){
+    console.log(`ayush`);
+})(); // ';' is very important here
+
+//IIFE IN ARROW FUCNTION
+( () => {
+    console.log(`hey ayush`);
+})();
+
+( (last_name) => {
+    console.log(`hey ayush ${last_name}`);
+})('maurya');
